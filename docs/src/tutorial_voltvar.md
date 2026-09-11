@@ -114,7 +114,7 @@ tp_pass_table(m = "lambda") = md(
 
 const TPCOL = [:seagreen, :orangered, :dodgerblue, :mediumorchid]
 
-# The PV resource the fleet is working against, and how much of it survives the droop.
+# The PV resource the fleet is working with, and how much of it survives the droop.
 function tp_pv_figure(m = "lambda"; res = tpi)
     r = res[m]
     p = plot(hours, collect(Float64, r.P_avail_kW), lw = 2, ls = :dash, color = :grey45,
